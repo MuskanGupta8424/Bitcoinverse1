@@ -1,0 +1,28 @@
+.trendContainer {
+  margin-top: 2rem;
+  background: #071d29;
+  color: #ffd600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trendContainer span {
+  font-size: x-large;
+  font-weight: 700;
+}
+.viewAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.viewAll img {
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .viewAll img {
+    max-width: 80%;
+  }
+}

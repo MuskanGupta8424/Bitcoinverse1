@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#header {
+  height: 100vh;
+  background: url("../Assist/image 1358 (1).png");
+  position: relative;
+  background-size: cover;
+  background-position: cover;
+  width: 100%;
+  height: 100vh;
+}
+#header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the opacity (last value) to your liking */
+}
+
+#header header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.svg-button {
+  background: #ffca28;
+  border-radius: 10% 10% 0% 0%;
+}
+.Bitcoin {
+  position: absolute;
+  max-width: 290px;
+  left: 50%;
+  top: 53%;
+  animation: circle1 6.6s linear infinite;
+  transform: translate(-50%, -50%);
+  background-color: balck;
+}
+@media only screen and (min-width: 1360px) {
+  .Bitcoin {
+    position: absolute;
+    max-width: 350px !important;
+    display: block !important;
+    left: 49.5%;
+    top: 48% !important;
+    animation: circle1 6.6s linear infinite;
+    transform: translate(-50%, -50%);
+    /* background-color: yellow; */
+  }
+}
+
+@media screen and (max-width: 995px), screen and (min-height: 769px) {
+  .Bitcoin {
+    animation: circle1 6.6s linear infinite;
+    display: block !important;
+    left: 49.5%;
+    max-width: 300px !important;
+    position: absolute;
+    top: 47.5% !important;
+    transform: translate(-50%, -50%);
+    /* background-color: blue; */
+  }
+}
+@media only screen and (max-width: 1025px) {
+  .Bitcoin {
+    position: absolute;
+    max-width: 280px !important;
+    display: block !important;
+    left: 49.5%;
+    top: 38.5% !important;
+    animation: circle1 6.6s linear infinite;
+    transform: translate(-50%, -50%);
+    /* background-color: red; */
+  }
+}
+@media only screen and (max-width: 1360px) {
+  .Bitcoin {
+    position: absolute;
+    max-width: 280px !important;
+    display: block !important;
+    left: 49.5%;
+    margin-top: -4.5% !important;
+    animation: circle1 6.6s linear infinite;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes circle1 {
+  0% {
+    transform: translate(-50%, -45%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -45%) scale(1);
+  }
+}
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 60%;
+  height: 100%;
+  z-index: 10;
+  overflow-y: auto;
+  background-color: rgb(26, 22, 22);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(163, 37, 37, 0.06);
+  transition: all 0.45s ease-in-out;
+}
+.menu.is-active {
+  top: 0;
+  right: 0;
+}
+.menu-inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  margin: 1.25rem 0rem;
+}
+.menu-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  transition: all 0.3s ease;
+  padding: 0.4rem;
+  
+}
+
+
+.menu svg {
+  margin: 0.4rem;
+}
+.menu-block {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: var(--display-100);
+  font-weight: 500;
+  line-height: 1.25;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+  margin: auto;
+  padding: 0.65rem 1.35rem;
+  border-radius: 3rem;
+  color: var(--color-white);
+  background-color: var(--color-green-300);
+  box-shadow: var(--shadow-medium);
+  transition: all 0.3s ease-in-out;
+}
+@media only screen and (max-width: 1250px) {
+  #header {
+    height: 100vh;
+    background: url("../Assist/image\ 1358\ \(1\).png");
+    position: relative;
+    background-size: cover;
+    background-position: cover;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .menu {
+    display: none;
+  }
+  .menu-inner {
+    display: flex;
+    flex-direction: row;
+    padding: 0.4rem;
+  }
+  .menu-link {
+    text-transform: capitalize;
+  }
+  .menu-block {
+    margin-left: 2rem;
+  }
+}
+.header {
+  height: 90px;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+
+.header.scrolled {
+  background-color: #192731;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+
+.light{
+  color:white;
+  z-index: 999;
+  
+}
+
+.light:hover::after{
+  width: 100%;
+  transition: width 0.3s linear;
+}
+
+.light::after{
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: gold;
+  margin: auto;
+  display: block;
+}
+
+.light:hover{
+  color: gold;
+}

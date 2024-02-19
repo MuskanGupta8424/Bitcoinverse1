@@ -1,0 +1,16 @@
+.yaya {
+  margin-top: 50%;
+}
+
+@media only screen and (max-width: 992px) {
+  .yaya {
+    margin-top: 0%;
+  }
+}
+.a {
+  padding: 15px;
+  box-shadow: rgba(174, 171, 171, 0.7) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.5) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.2) 0px 30px 60px -31px;
+}
+

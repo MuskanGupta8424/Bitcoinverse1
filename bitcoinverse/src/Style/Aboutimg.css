@@ -1,0 +1,402 @@
+.containersss{
+    height:60vh ;
+    width: 60vw;
+    position: absolute;
+    perspective: 1000px;
+    /* background-color: red; */
+}
+.bix{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    transform-style: preserve-3d;
+    /* transform: rotateY(30deg); */
+    animation: animate 5s infinite;
+    transition: all 1s;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotateX(45deg) rotateY(-45deg);
+    }
+    25%{
+        transform: rotateX(-45deg) rotateY(-45deg);
+    }
+    50%{
+        transform: rotateX(45deg) rotateY(45deg);
+    }
+    75%{
+        transform: rotateX(-45deg) rotateY(45deg);
+    }
+    100%{
+        transform: rotateX(45deg) rotateY(-45deg);
+    }
+}
+
+.cards{
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    padding: 100px 0px;
+    color: white;
+    /* background: rgba(50, 132, 255, 1); */
+    background: linear-gradient(rgba(203, 252, 255, 0.496),rgba(50, 132, 255, 0.575));
+    border: 2px solid white;
+    box-sizing: border-box;
+    position: absolute; 
+    transition: all 1s;
+    cursor: pointer;
+}
+
+#front{
+    transform: translateZ(125px);
+}
+#back{
+    transform: translateZ(-125px);
+}
+#left{
+    right: 125px;
+    transform: rotateY(-90deg);
+}
+#right{
+    left: 125px;
+    transform:rotateY(90deg);
+}
+#top{
+    bottom: 125px; 
+    transform: rotateX(90deg);
+}
+#bottom{
+    top: 125px;
+    transform: rotateX(-90deg);
+}
+
+
+input{
+    height: 50px;
+    width: 100px;
+    font-size: 22px;
+    border-radius: 5px;
+   
+}
+
+@media  (max-width:1200px) {
+    input{
+        display: none;
+    }
+    
+}
+@media (min-width:282px) and (max-width:440px){
+    
+}
+
+
+input:focus~ .bix #front{
+    transform: translateZ(180px) rotateY(360deg);
+}
+input:focus~ .bix #back{
+    transform: translateZ(-180px) rotateY(360deg);
+}
+input:focus~ .bix #left{
+    right: 180px;
+}
+input:focus~ .bix #right{
+    left: 180px;
+}
+input:focus~ .bix #top{
+    bottom: 180px;
+}
+input:focus~ .bix #bottom{
+    bottom: 180px;
+}
+
+.bix #front:hover{
+    transform: translateZ(180px);
+}
+.bix #back:hover {
+    transform: translateZ(-180px);
+}
+.bix #left:hover{
+    right: 180px;
+}
+.bix #right:hover{
+    left: 180px;
+}
+.bix #top:hover{
+    bottom: 180px;
+}
+.bix #bottom:hover{
+    top: 180px;
+}
+@media (min-width:220px) and (max-width:280px) {
+    #cont{
+        width: 100vw;
+        height: 200vh;
+    }
+    .bix{
+        right: 67px;
+        top: 950px;
+        height: 150px;
+        width: 150px;
+    }
+    .cards{
+        height: 150px;
+        width: 150px;
+    }
+    #front{
+        transform: translateZ(100px);
+    width: 154px;
+    height: 150px;
+
+    }
+    #back{
+        transform: translateZ(-100px);
+        width: 154px;
+        height: 150px;
+    }
+    #top{
+        bottom: 50px;
+    }
+    #bottom{
+        top: 100px;
+    }
+    #left{
+right: 55px;
+width: 193px;
+    }
+    #right{
+left:55px;  
+width: 193px;
+
+}
+}
+@media (min-width:282px) and (max-width:440px) {
+    #cont{
+        width: 100vw;
+        height: 130vh;
+    }
+    .bix{
+        top: 640px;
+right: 100px;
+width: 170px;
+height: 170px;
+    }
+    .cards{
+        height: 170px;
+        width: 170px;
+    }
+    #abouthead{
+        padding-top: 0rem !important;
+        margin-top: 1rem !important;
+    }
+    #aboutim{
+        padding-top: 0rem !important;
+    }
+    #front{
+        transform: translateZ(100px);
+        width: 168px;
+        height: 150px;
+    }
+    #back{
+        transform: translateZ(-100px);
+        width: 167px;
+        height: 150px;
+
+    }
+    #top{
+        bottom: 70px;
+    }
+    #bottom{
+        top: 100px;
+    }
+    #left{
+right: 70px;
+width: 197px;
+
+    }
+    #right{
+left:70px;
+width: 193px;
+   
+}
+}
+@media (min-width:445px) and (max-width:550px) {
+    #cont{
+        width: 100vw;
+        height: 130vh;
+        padding: 0;
+    }
+    .bix{
+        right: 126px;
+        top: 700px;
+        height: 200px;
+        width: 200px;
+    }
+    .cards{
+        height: 200px;
+        width: 200px;
+    }
+    #front{
+        transform: translateZ(100px);
+    }
+    #back{
+        transform: translateZ(100px);
+    }
+    #right{
+        left: 100px;
+    }
+    #left{
+        right: 100px;
+    }
+    #top{
+        bottom: 102px;
+    }
+    #bottom{
+        top: 100px;
+    }
+}
+
+/* @media (max-width: 768px) {
+    .bix{
+        top: 650px;
+right: 100px;
+width: 170px;
+height: 170px;
+    }
+    .cards{
+        height: 170px;
+        width: 170px;
+    }
+    #abouthead{
+        padding-top: 0rem !important;
+        margin-top: 1rem !important;
+    }
+    #aboutim{
+        padding-top: 0rem !important;
+    }
+    #front{
+        transform: translateZ(100px);
+
+    }
+    #back{
+        transform: translateZ(-95px);
+
+    }
+    #top{
+        bottom: 80px;
+    }
+    #bottom{
+        top: 110px;
+    }
+    #left{
+right: 95px;
+    }
+    #right{
+left: 95px;
+   
+}
+#cont{
+    width: 100vw;
+    height: 130vh;
+    padding: 0;
+}
+.img-fluid input{
+margin-top: 1rem;
+margin-left: -8.5rem;
+}
+  }*/
+  @media (min-width:768px) and  (max-width:820px) {
+    #abouthead{
+        padding-top: 2rem !important;
+        margin-top: 2rem !important;
+    }
+    .bix{
+        right: 96px;
+        top: 315px;
+        height: 200px;
+        width: 200px;
+    }
+    .cards{
+        height: 200px;
+        width: 200px;
+    }
+    #aboutim{
+        padding-top: 1rem !important;
+    }
+    #front{
+        transform: translateZ(-100px);
+    }
+    #back{
+        transform: translateZ(100px);
+    }
+    #right{
+        left: 100px;
+    }
+    #left{
+        right: 100px;
+    }
+    #top{
+        bottom: 102px;
+    }
+    #bottom{
+        top: 100px;
+    }
+    #cont{
+        width: 100vw;
+        height: 80vh;
+    }
+    .img-fluid input{
+        margin-left: -2rem;
+        margin-top: 1rem;
+    }
+  } 
+   @media (min-width:822px) and  (max-width:912px) {
+    .bix{
+        right: 120px;
+        top: 315px;
+        width: 150px;
+        height: 150px;
+    }
+    #cont{
+        width: 100vw;
+        height: 60vh;
+        padding: 0;
+    }
+    .img-fluid input{
+        margin-left: -2rem;
+        margin-top: 1rem;
+    }
+    .cards{
+        width: 150px;
+        height: 150px;
+    }
+    #front{
+        transform: translateZ(-98px);
+    }
+    #back{
+        transform: translateZ(100px);
+    }
+    #right{
+        left: 42px;
+width: 200px;
+    }
+    #left{
+        right: 42px;
+        width: 200px;
+    }
+    #top{
+        bottom: 50px;
+    }
+    #bottom{
+        top: 100px;
+    }
+  } 
+@media (min-width:913px) and (max-width:1024px) {
+    .bix{
+        right: 112px;
+        top: 250px;
+    }
+}
+ 
