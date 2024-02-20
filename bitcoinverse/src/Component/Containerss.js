@@ -5,7 +5,8 @@ import Circle from './Circle'
 import {Dark,EnterApp} from "../Assist"
 import { HiMenu } from "react-icons/hi";
 import { IoCloseSharp } from "react-icons/io5";
-import Typewriter from './Typewriter';
+import Typewriter from 'typewriter-effect';
+
 
 import "../Style/Curser.css"
 const Containerss = () => {
@@ -25,7 +26,6 @@ const Containerss = () => {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
-      // Clean up the scroll event listener when the component unmounts
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -210,7 +210,16 @@ const Containerss = () => {
             <div className='col-12 col-lg-6 position-relative' style={{}}>
               <h1 className='main-heding' >
                 BUILD THE 
-                FUTURE WITH  <br /> <span style={{ color: '#FFD600' }}><Typewriter text="BITCOINVERSE" /></span>
+                FUTURE WITH  <br /> <span style={{ color: '#FFD600' }}>
+                {/* <Typewriter text={text} /> */}
+                <Typewriter
+  options={{
+    strings: ['BITCOIN', 'BITCOINVERSE'],
+    autoStart: true,
+    loop: true,
+  }}
+/>
+                </span>
               </h1>
             </div>
             <div className='col-12 col-lg-6 position-relative py-5'>

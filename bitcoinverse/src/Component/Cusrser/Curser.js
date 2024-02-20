@@ -2,9 +2,9 @@ import React, { useRef , useEffect} from 'react'
 import "../../Style/Curser.css"
 
 const Curser = () => {
-    const ref = React.useRef(null);
+    const ref = useRef(null);
 
-    React.useEffect(() => {
+    useEffect(() => {
       document.addEventListener('mousemove',(event)=>{
         const {clientX,clientY} = event;
         const mousex = clientX - ref.current.clientWidth / 2;

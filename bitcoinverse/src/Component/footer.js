@@ -2,7 +2,8 @@ import React from 'react';
 import logo from '../Assist/Dark.png';
 import { FaTwitter, FaTelegram, FaDiscord } from 'react-icons/fa';
 import '../Style/footer.css';
-import Typewriter from './Typewriter';
+// import Typewriter from './Typewriter';
+import Typewriter from 'typewriter-effect';
 
 const Footer = () => {
   return (
@@ -24,8 +25,15 @@ const Footer = () => {
                         $BTV is an open-source protocol layer of the ecosystem, a highly secure and useful utility that enables users to participate in the BitCoinVerse ecosystem.
                       </p>
                     </div>
-                    <div className="footer-social-icon">
-                    <span style={{color:"gold"}} ><Typewriter text="OUR SOCIALS"/></span>
+                    <div className=""><span style={{color:"gold",fontSize:"1.8rem",fontWeight:"600"}} >
+                    <Typewriter
+options={{
+    strings: ['OUR SOCIALS'],
+    autoStart: true,
+    loop: true,
+  }}
+/>
+                    </span>
                       <div className='d-flex  align-items-center py-4 gap-3 '>
                      
                           <a href="/">
